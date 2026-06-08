@@ -31,11 +31,3 @@ npm run dev
 | Senha | senha |
 
 ---
-
-## Extra
-
-> **Quem cometeu o crime?**
-
-> **Por quê?**
-
-> **Quem são os suspeitos?**
