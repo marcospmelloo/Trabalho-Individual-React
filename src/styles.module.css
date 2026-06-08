@@ -91,6 +91,13 @@ main {
     border-radius: 10px;
     margin-bottom: 10px;
     border: 0px solid;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.entrar:hover {
+    scale: 1.2;
+    background-color: rgba(150, 28, 28, 0.918)
 }
 
 .conta a {
@@ -112,6 +119,13 @@ main {
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.flaID:hover {
+    background-color: rgba(218, 30, 30, 0.918);
+    color: white;
 }
 
 .flaID img {

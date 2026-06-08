@@ -5,6 +5,15 @@ import powered from './assets/logo-futebolcard-powered-by.png'
 import styles from './styles.module.css';
 
 function App() {
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+
+  const handleLogin = () => {
+  console.log("Email:", email);
+  console.log("Senha:", senha);
+  alert("Login realizado com sucesso!");
+};
+
   return (
     <>
       <nav>
@@ -19,11 +28,15 @@ function App() {
           <h1>Login</h1>
           <p>Já possui cadastro? Acesse abaixo.</p>
           <p>Caso seja sócio trocedor com FlaID acesse através do FlaID</p>
-          <input type="email" placeholder="Email" className={styles.email}/>
-          <input type="password" placeholder="Senha" className={styles.senha}/>
+          <input type="email" placeholder="Email" className={styles.email} 
+          value={email} onChange={(e) => setEmail(e.target.value)}/>
+          <input type="password" placeholder="Senha" className={styles.senha}
+          value={senha} onChange={(e) => setSenha(e.target.value)}/>
           <p className={styles.forget}>Esqueceu a senha?</p>
           <button
+            type="button"
             className={styles.entrar}
+            onClick={handleLogin}
           >
             Entrar
           </button>
