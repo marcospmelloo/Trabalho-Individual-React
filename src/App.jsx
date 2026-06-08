@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from './assets/logo.png'
 import flamengo from './assets/flamengo.png'
 import powered from './assets/logo-futebolcard-powered-by.png'
@@ -7,12 +7,24 @@ import styles from './styles.module.css';
 function App() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [verificarLogin, setVerificarLogin] = useState(false);
+  const [primeiroRender, setPrimeiroRender] = useState(true);
 
   const handleLogin = () => {
   console.log("Email:", email);
   console.log("Senha:", senha);
-  alert("Login realizado com sucesso!");
+  setVerificarLogin(!verificarLogin);
+  setPrimeiroRender(false);
 };
+
+  useEffect(() => {
+    if (primeiroRender) return;
+    if (email === "marcospaulo@gmail.com" && senha === "senha") {
+    alert("Login realizado com sucesso!");
+    } else {
+      alert("Email ou senha inválidos!");
+    }
+}, [verificarLogin]);
 
   return (
     <>
